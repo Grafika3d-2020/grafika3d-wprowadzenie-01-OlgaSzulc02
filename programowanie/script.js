@@ -1,7 +1,11 @@
 // console.log(THREE)
 
-const renderer = new THREE.WebGLRenderer();
+const renderer = new THREE.WebGLRenderer({
+  antialias: true 
+});
+
 const scene = new THREE.Scene();
+
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
@@ -9,11 +13,14 @@ const camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.inner
 camera.position.set(0, 0, 100);
 camera.lookAt(0, 0, 0);
 
+let controls = new THREE.OrbitControls(camera, renderer.domElement);
+controls.addEventListener("change", renderer);
+
 const LineMaterial = new THREE.LineBasicMaterial({ color: 0x00ffff });
 const points = [];
-points.push(new THREE.Vector3(-10, 0, 0));
-points.push(new THREE.Vector3(0, 10, 0));
-points.push(new THREE.Vector3(0, -10, 0));
+//points.push(new THREE.Vector3(-10, 0, 0));
+//points.push(new THREE.Vector3(0, 10, 0));
+//points.push(new THREE.Vector3(0, -10, 0));
 
 //   for (var i=1;i<15;i++){
 //       points.push( new THREE.Vector3( -5*i, -2*i, 0 ) );
@@ -45,7 +52,7 @@ scene.background = new THREE.Color(color);
 const colorWhite = new THREE.Color("hsl(106, 100%, 90%)");
 
 const width = 20;
-const height = 20;
+const height = 80;
 const depth = 20;
 const cubeGeometry = new THREE.BoxGeometry(width, height, depth);
 const cubeMaterial = new THREE.MeshPhongMaterial({
