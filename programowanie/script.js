@@ -60,12 +60,7 @@ const cubeGeometry = new THREE.BoxGeometry( width, height, depth);
 const cubeMaterial = new THREE.MeshPhongMaterial({
     color: colorWhite,
     shininess: 80
-})
-//szescian
-const geometry = new THREE.ConeGeometry( 5, 20, 32 );
-const material = new THREE.MeshBasicMaterial( {color: 0xffff00} );
-const cone = new THREE.Mesh( geometry, material );
-scene.add( cone );
+});
 
 const cube = new THREE.Mesh( cubeGeometry, cubeMaterial);
 scene.add (cube);
@@ -80,5 +75,22 @@ const animate = () => {
     cube.rotation.x +=.02
     renderer.render( scene, camera );
 }
+//szescian
+const geometry = new THREE.ConeGeometry( 5, 20, 32 );
+const material = new THREE.MeshBasicMaterial( {color: 0xffff00} );
+const cone = new THREE.Mesh( geometry, material );
+scene.add( cone );
+
+cone.rotation.z = -100;
+cone.rotation.x = 20;
+
+renderer.render( scene, camera );
+
+const animate = () => {
+    requestAnimationFrame(animate)
+    cone.rotation.x +=.02
+    renderer.render( scene, camera );
+}
+
 
 animate();
