@@ -1,8 +1,6 @@
 // console.log(THREE)
 
-const renderer = new THREE.WebGLRenderer({
-  antialias: true 
-});
+const renderer = new THREE.WebGLRenderer();
 
 const scene = new THREE.Scene();
 
