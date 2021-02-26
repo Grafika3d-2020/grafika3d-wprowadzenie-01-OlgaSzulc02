@@ -34,6 +34,30 @@ const LineMaterial = new THREE.LineBasicMaterial( { color: 0x00ffff } );
 // scene.add( line );
 // renderer.render( scene, camera );
 
+//kostka
+//const width = 20;
+//const height = 80;
+//const depth = 20;
+//const cubeGeometry = new THREE.BoxGeometry( width, height, depth);
+//const cubeMaterial = new THREE.MeshPhongMaterial({
+ //   color: colorWhite,
+//    shininess: 80
+//});
+
+//const cube = new THREE.Mesh( cubeGeometry, cubeMaterial);
+//scene.add (cube);
+
+//cube.rotation.z = -100;
+//cube.rotation.x = 20;
+
+//renderer.render( scene, camera );
+
+//const animate = () => {
+  //  requestAnimationFrame(animate)
+    //cube.rotation.x +=.02
+    //renderer.render( scene, camera );
+//}
+
 const light1 = new THREE.PointLight({color: 0x0fff00})
 scene.add( light1 );
 light1.position.x = 50
@@ -52,34 +76,17 @@ scene.fog = new THREE.Fog(color, near, far);
 scene.background = new THREE.Color(color);
 
 const colorWhite = new THREE.Color('hsl(106, 100%, 90%)')
-//kostka
-const width = 20;
-const height = 80;
-const depth = 20;
-const cubeGeometry = new THREE.BoxGeometry( width, height, depth);
-const cubeMaterial = new THREE.MeshPhongMaterial({
-    color: colorWhite,
-    shininess: 80
+//szescian
+
+const coneGeometry = new THREE.ConeGeometry( 5, 20, 32 );
+const coneMaterial = new THREE.MeshPhongMaterial({
+  color: colorWhite,
+  shininess: 80
 });
 
-const cube = new THREE.Mesh( cubeGeometry, cubeMaterial);
-scene.add (cube);
 
-cube.rotation.z = -100;
-cube.rotation.x = 20;
-
-renderer.render( scene, camera );
-
-const animate = () => {
-    requestAnimationFrame(animate)
-    cube.rotation.x +=.02
-    renderer.render( scene, camera );
-}
-//szescian
-const geometry = new THREE.ConeGeometry( 5, 20, 32 );
-const material = new THREE.MeshBasicMaterial( {color: 0xffff00} );
-const cone = new THREE.Mesh( geometry, material );
-scene.add( cone );
+const cone = new THREE.Mesh( coneGeometry, coneMaterial);
+scene.add (cone);
 
 cone.rotation.z = -100;
 cone.rotation.x = 20;
@@ -91,6 +98,5 @@ const animate = () => {
     cone.rotation.x +=.02
     renderer.render( scene, camera );
 }
-
 
 animate();
