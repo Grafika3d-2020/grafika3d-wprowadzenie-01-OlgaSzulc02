@@ -13,8 +13,8 @@ const camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.inner
 camera.position.set(0, 0, 100);
 camera.lookAt(0, 0, 0);
 
-let controls = new THREE.OrbitControls(camera, renderer.domElement);
-controls.addEventListener("change", renderer);
+//let controls = new THREE.OrbitControls(camera, renderer.domElement);
+//controls.addEventListener("change", renderer);
 
 const LineMaterial = new THREE.LineBasicMaterial({ color: 0x00ffff });
 const points = [];
