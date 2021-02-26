@@ -52,7 +52,7 @@ scene.fog = new THREE.Fog(color, near, far);
 scene.background = new THREE.Color(color);
 
 const colorWhite = new THREE.Color('hsl(106, 100%, 90%)')
-
+//kostka
 const width = 20;
 const height = 80;
 const depth = 20;
@@ -61,6 +61,11 @@ const cubeMaterial = new THREE.MeshPhongMaterial({
     color: colorWhite,
     shininess: 80
 })
+//szescian
+const geometry = new THREE.ConeGeometry( 5, 20, 32 );
+const material = new THREE.MeshBasicMaterial( {color: 0xffff00} );
+const cone = new THREE.Mesh( geometry, material );
+scene.add( cone );
 
 const cube = new THREE.Mesh( cubeGeometry, cubeMaterial);
 scene.add (cube);
