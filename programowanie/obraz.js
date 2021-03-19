@@ -16,12 +16,12 @@ function init() {
 
     let materialArray = [];
 
-    let texture_ft = new THREE.TextureLoader().load('img/barren_ft.jpg');
-    let texture_bk = new THREE.TextureLoader().load('img/barren_bk.jpg');
-    let texture_up = new THREE.TextureLoader().load('img/barren_up.jpg');
-    let texture_dn = new THREE.TextureLoader().load('img/barren_dn.jpg');
-    let texture_rt = new THREE.TextureLoader().load('img/barren_rt.jpg');
-    let texture_lf = new THREE.TextureLoader().load('img/barren_lf.jpg');
+    let texture_ft = new THREE.TextureLoader().load('zdu/divine_ft.jpg');
+    let texture_bk = new THREE.TextureLoader().load('zdu/divine_bk.jpg');
+    let texture_up = new THREE.TextureLoader().load('zdu/divine_up.jpg');
+    let texture_dn = new THREE.TextureLoader().load('zdu/divine_dn.jpg');
+    let texture_rt = new THREE.TextureLoader().load('zdu/divine_rt.jpg');
+    let texture_lf = new THREE.TextureLoader().load('zdu/divine_lf.jpg');
 
     materialArray.push(new THREE.MeshBasicMaterial({map: texture_ft}));
     materialArray.push(new THREE.MeshBasicMaterial({map: texture_bk}));
