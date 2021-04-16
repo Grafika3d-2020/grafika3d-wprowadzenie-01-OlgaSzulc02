@@ -1,1 +1,13 @@
-
+a {
+    float: left;
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 15px;
+    text-decoration: none;
+    background-color: #f7167f;
+    margin: 2px;
+    border-radius: 4em;
+    transition-duration: 1ms;
+    width: 5em;
+}
